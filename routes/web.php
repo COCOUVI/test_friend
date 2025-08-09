@@ -75,7 +75,6 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     // route ressource pour gérer les logements
     Route::resource('logements', LogementController::class);
-    Route::get('admin/logements/{logement}', [LogementController::class, 'show'])->name('logements.show');
 
     // route pour gestion des demandes
     Route::get('/paiements', [PaiementController::class, 'index'])->name('paiements.index');
@@ -87,7 +86,6 @@ Route::middleware('auth')->group(function () {
 
     // Details appartement
 
-    Route::get('/logements/{id}', [MaisonController::class, 'show'])->name('logements.show');
 
     // edit
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
