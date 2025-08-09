@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 Route::get('/', function () {
     try {
         // Ton code normal
-        return view('bienvenue');
+        return view('welcome');
     } catch (\Throwable $exception) {
         \Log::error($exception);
         return response()->view('500', ['exception' => $exception], 500);
